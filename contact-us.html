@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - BNP Paribas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
+      integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* --- Global Styles and Variables --- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #f7f9fc;
+        --dark-color: #2c3e50;
+        --light-color: #ffffff;
+        --text-color: #333333;
+        --border-radius: 8px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--dark-color);
+        margin-bottom: 50px;
+      }
+
+      /* --- Header --- */
+      .header {
+        background-color: var(--light-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+      }
+
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .navigation-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      .navigation-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+      }
+
+      .navigation-links a:hover {
+        color: var(--primary-color);
+      }
+
+      /* --- Contact Page Styles --- */
+      .contact-page-section {
+        padding: 80px 0;
+        background-color: var(--secondary-color);
+      }
+
+      .contact-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 50px;
+        margin-bottom: 50px;
+        align-items: flex-start;
+      }
+
+      .contact-form-container,
+      .contact-info-container {
+        background-color: var(--light-color);
+        padding: 40px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form-container h3,
+      .contact-info-container h3 {
+        color: var(--dark-color);
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+      }
+
+      .contact-form textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      .contact-form .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        width: 40px;
+        text-align: center;
+      }
+
+      .contact-item p {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .map-container {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        border: 0;
+      }
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--dark-color);
+        color: #f7f9fc;
+        padding: 60px 0 20px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-map,
+      .footer-contact {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .footer-map img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+      }
+
+      .footer-contact h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .footer-contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .footer-contact input,
+      .footer-contact textarea {
+        width: 100%;
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .footer-contact input::placeholder,
+      .footer-contact textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-contact .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .footer-contact .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-bottom p {
+        font-size: 0.9rem;
+        color: #c0c0c0;
+      }
+      /* --- Chatbot Styles --- */
+      #chatbot-icon {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        transition: transform 0.3s ease;
+      }
+
+      #chatbot-icon:hover {
+        transform: scale(1.1);
+      }
+
+      .chatbot-notification {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: red;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: 50%;
+      }
+
+      #chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 350px;
+        height: 450px;
+        background-color: var(--dark-color);
+        border: 1px solid #4a6480;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .chatbot-hidden {
+        transform: scale(0.95);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #chatbot-header {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      #chatbot-messages {
+        flex-grow: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+      }
+
+      #chatbot-input {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background-color: var(--secondary-color);
+        box-sizing: border-box;
+        flex-shrink: 0;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-5">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item px-5 active">
+            <a class="nav-link" href="contact-us.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="contact-page-section">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="contact-intro">
+          We're here to help. Whether you have a question about our services,
+          need support, or want to explore partnership opportunities, our team
+          is ready to assist you. Please fill out the form below or use the
+          contact details provided.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-form-container">
+            <h3>Send Us a Message</h3>
+            <form class="contact-form">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <input type="text" placeholder="Subject" />
+              <textarea placeholder="Your Message" required></textarea>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+          <div class="contact-info-container">
+            <h3>Our Contact Details</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <p>787 7th Avenue, New York, NY 10019</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <p>contact@bnp-paribas-usa.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.0298319690184!2d-0.1654160842299863!3d51.52843997963753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876114e9f737527%3A0x868b446a8d6b9d62!2sBNP%20Paribas%20London%20Headquarters!5e0!3m2!1sen!2suk!4v1678893456789!5m2!1sen!2suk"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-section">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> mail@example.com</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 787 7th Avenue, New York, NY
+              10019
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section newsletter">
+          <h4>
+            Subscribe To Receive Helpful Articles, Customer Alerts, Services &
+            More.
+          </h4>
+          <form action="#">
+            <input type="email" placeholder="Your Email" />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+          <div class="footer-bottom">
+            <p>Bnp paribas. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="chatbot-icon">
+      <i class="fas fa-comment-dots"></i>
+      <span class="chatbot-notification">2</span>
+    </div>
+
+    <div id="chatbot-container" class="chatbot-hidden">
+      <div id="chatbot-header">
+        <span>Chat with us!</span>
+      </div>
+      <div id="chatbot-messages"></div>
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Type your message..."
+      />
+    </div>
+
+    <script>
+      const chatbotIcon = document.getElementById("chatbot-icon");
+      const chatbotContainer = document.getElementById("chatbot-container");
+
+      chatbotIcon.addEventListener("click", () => {
+        chatbotContainer.classList.toggle("chatbot-hidden");
+      });
+    </script>
+  </body>
+</html>

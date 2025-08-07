@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <script type="module" src="./js/transfer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Font Awesome -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
+      integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .transferContainer {
+        display: flex;
+        margin-top: 20px;
+
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .updateContainer {
+        background-color: #ffffff;
+
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 500px;
+      }
+      .updateContainer h2 {
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-5">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="contact-us.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="transferContainer">
+      <div class="updateContainer">
+        <h2>WIRE TRANSFER</h2>
+        <form id="transactionFormBox">
+          <div class="form-group">
+            <label for="account">Recipient Account</label>
+            <input class="form-control" type="text" id="beneficiaryAccount" />
+          </div>
+          <div class="form-group">
+            <label for="name">Recipient Name</label>
+            <input class="form-control" type="text" id="beneficiaryName" />
+          </div>
+
+          <div class="form-group">
+            <label for="bank">Recipient Bank</label>
+            <select class="form-select" id="beneficiaryBank">
+              <option value="bank-of-america">Bank of America</option>
+              <option value="wells-fargo">Wells Fargo</option>
+              <option value="jpmorgan-chase">JPMorgan Chase</option>
+              <option value="citibank">Citibank</option>
+              <option value="us-bank">U.S. Bank</option>
+              <option value="pnc-bank">PNC Bank</option>
+              <option value="capital-one">Capital One</option>
+              <option value="td-bank">TD Bank</option>
+              <option value="truist-bbt">BB&T (now Truist)</option>
+              <option value="truist-suntrust">SunTrust (now Truist)</option>
+              <option value="american-express">American Express</option>
+              <option value="hsbc-bank-usa">HSBC Bank USA</option>
+              <option value="charles-schwab-bank">Charles Schwab Bank</option>
+              <option value="ally-bank">Ally Bank</option>
+              <option value="citizens-bank">Citizens Bank</option>
+              <option value="fifth-third-bank">Fifth Third Bank</option>
+              <option value="keybank">KeyBank</option>
+              <option value="regions-bank">Regions Bank</option>
+              <option value="huntington-national-bank">
+                Huntington National Bank
+              </option>
+              <option value="usaa-federal-savings-bank">
+                USAA Federal Savings Bank
+              </option>
+              <option value="bank-of-the-west">Bank of the West</option>
+              <option value="synchrony-bank">Synchrony Bank</option>
+              <option value="discover-bank">Discover Bank</option>
+              <option value="m&t-bank">M&T Bank</option>
+              <option value="first-citizens-bank">First Citizens Bank</option>
+              <option value="frost-bank">Frost Bank</option>
+              <option value="comerica-bank">Comerica Bank</option>
+              <option value="zions-bank">Zions Bank</option>
+              <option value="santander-bank">Santander Bank</option>
+              <option value="bmo-harris-bank">BMO Harris Bank</option>
+              <option value="peoples-united-bank">People's United Bank</option>
+              <option value="first-horizon-bank">First Republic Bank</option>
+              <option value="valley-national-bank">Valley National Bank</option>
+              <option value="webster-bank">Webster Bank</option>
+              <option value="new-york-community-bank">
+                New York Community Bank
+              </option>
+              <option value="first-republic-bank">First Republic Bank</option>
+              <option value="flagstar-bank">Flagstar Bank</option>
+              <option value="synovus-bank">Synovus Bank</option>
+              <option value="south-state-bank">South State Bank</option>
+              <option value="citizens-business-bank">
+                Citizens Business Bank
+              </option>
+              <option value="bancorpsouth-bank">BancorpSouth Bank</option>
+              <option value="pinnacle-bank">Pinnacle Bank</option>
+              <option value="community-bank">Community Bank</option>
+              <option value="great-western-bank">Great Western Bank</option>
+              <option value="berkshire-bank">Berkshire Bank</option>
+              <option value="nbt-bank">NBT Bank</option>
+              <option value="city-national-bank">City National Bank</option>
+              <option value="prosperity-bank">Prosperity Bank</option>
+              <option value="ibc-bank">IBC Bank</option>
+              <option value="tcf-national-bank">TCF National Bank</option>
+              <option value="hancock-whitney-bank">Hancock Whitney Bank</option>
+              <option value="first-national-bank">First National Bank</option>
+              <option value="bancfirst">BancFirst</option>
+              <option value="cathay-bank">Cathay Bank</option>
+              <option value="east-west-bank">East West Bank</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Recipient Address</label>
+            <input class="form-control" type="text" id="recipientAddress" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Recipient Bank Address</label>
+            <input class="form-control" type="text" id="bankAddress" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Recipient Routing Number</label>
+            <input class="form-control" type="text" id="routingNumber" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">SWIFT/BIC Code</label>
+            <input class="form-control" type="text" id="swift" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Amount</label>
+            <input class="form-control" type="text" id="amount" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Transfer Date</label>
+            <input class="form-control" type="date" id="date" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Currency</label>
+            <select class="form-select" id="currency">
+              <option value="Euros">€ - Euros</option>
+              <option value="Dollars">$ - Dollars</option>
+              <option value="wells-fargo">£ - Pounds</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Purpose Of Transfer</label>
+            <input class="form-control" type="text" id="transferPurpose" />
+          </div>
+          <div class="form-group">
+            <label for="transactionAmount">Optional Message To Recipient</label>
+            <input class="form-control" type="text" id="recipientMessage" />
+          </div>
+
+          <button
+            class="mt-3 btn btn-primary border-0"
+            id="transferBtn"
+            type="submit"
+          >
+            Transfer
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "RFRWWG3T9M9Uph7c0syW5",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="RFRWWG3T9M9Uph7c0syW5"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+  </body>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNP-Paribas</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src ="./js/login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"> <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item px-5 active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="services.html">Services</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="contact-us.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <section class="hero-section">
+    <div class="container">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <p class="hero-pre-title">YOUR TRUSTED FINANCIAL PARTNER</p>
+                <h1 class="hero-title">Secure Online Banking, Simplified.</h1>
+                <p class="hero-description">
+                    Manage your finances anytime, anywhere. Our secure digital platform offers easy access to your accounts, transfers, and investments.
+                </p>
+            </div>
+            <div class="hero-form-container">
+                <div class="login-card">
+                    <h2 class="login-title">Log in to your account</h2>
+                    <form action="#" id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="username">User ID</label>
+                            <input type="text" id="username" name="username" placeholder="Enter your User ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-actions">
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Log In</button>
+                    </form>
+                    <div class="new-user-link">
+                        <p>New to BNP? <a href="signup.html">Open an account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+<div class="services-grid">
+    <div class="service-item">
+        <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+        <h3>Digital Payments</h3>
+        <p>Make secure payments, transfer funds, and manage bills with ease from your account.</p>
+    </div>
+    <div class="service-item">
+    <div class="service-icon"><i class="fas fa-handshake"></i></div>
+    <h3>Personal Loans</h3>
+    <p>Find the right loan for your needs with competitive rates and flexible repayment options.</p>
+    
+</div>
+    <div class="service-item">
+        <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
+        <h3>Savings Accounts</h3>
+        <p>Grow your money with high-yield savings accounts and reach your financial goals faster.</p>
+      
+    </div>
+    <div class="service-item">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Investment Planning</h3>
+        <p>Get expert advice and tools to help you plan and manage your investment portfolio.</p>
+     
+    </div>
+</div>
+</section>
+<section class="about-section">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our History and Foundational Values</h3>
+                <p>
+                    Established in 1980, BNP-Paribas was founded on the principles of trust, innovation, and client-centricity. We began with a simple goal: to provide reliable financial services that help our community thrive. Over the decades, we have evolved with the digital landscape, but our core values remain the same. We are committed to fostering financial empowerment by offering transparent and accessible banking for everyone.
+                </p>
+
+                <h3>Advanced Security and Technology</h3>
+                <p>
+                    Your security is our highest priority. We use state-of-the-art encryption technologies and multi-factor authentication to protect your personal and financial data. Our platforms are monitored 24/7 by a team of experts to detect and prevent fraudulent activity, giving you peace of mind whether you're logging in from home or on the go. Our commitment to technology also means we are constantly innovating to provide you with the most efficient and user-friendly digital banking experience possible.
+                </p>
+
+                <h3>Comprehensive Financial Services</h3>
+                <p>
+                    We offer a full suite of financial products tailored to meet the diverse needs of our clients. Our services include:
+                    <ul>
+                        <li>Digital Payments & Transfers:Seamlessly manage bills and send money with instant, secure transfers.</li>
+                        <li>Personal and Business Loans:Get flexible and competitive loan options to finance your dreams, from a new car to a home renovation.</li>
+                        <li>High-Yield Savings Accounts:Grow your wealth with accounts that offer excellent returns and easy access to your funds.</li>
+                        <li>Investment Planning: Partner with our financial advisors and use our expert tools to build a robust investment portfolio for your future.</li>
+                    </ul>
+                </p>
+
+                <h3>Community and Social Responsibility</h3>
+                <p>
+                    We believe that a bank's role extends beyond financial transactions. We are deeply committed to social responsibility and actively support local initiatives, promote financial literacy programs in schools, and invest in sustainable community projects. We are more than a bank; we are a partner in building a better, more prosperous future for all.
+                </p>
+            </div>
+            
+            <div class="image">
+                <img src="images/1.jpeg" alt="About BNP-Paribas">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section know-more-section">
+  <div class="container">
+    <h2 class="section-title">Know More</h2>
+    <div class="know-more-grid">
+      <div class="customer-service-content">
+        <h3>Dedicated to Delivering Exceptional <br> Customer Service</h3>
+        <p>
+          At our bank, we believe that customer satisfaction is the foundation of every successful financial journey. 
+          Our team is committed to understanding your needs and providing tailored solutions that help you grow and thrive. 
+          With innovation, security, and integrity at the core of our values, we continue to build trust and create financial ease for all. 
+        </p>
+        <img src="images/sign.jpeg" alt="signature">
+        <h4>David Miller</h4>
+        <p>Chairman of the Board</p>
+      </div>
+
+      <div class="features-with-image">
+        <div class="features-list">
+
+          <div class="feature-box">
+            <h5>Reliable Digital Banking</h5>
+            <p>
+              Manage your finances anytime, anywhere with our secure digital banking tools. 
+              From fund transfers to utility payments, enjoy seamless services designed for your convenience. 
+              Our platforms are built with top-tier security to protect your data and transactions. 
+              Stay connected to your money, whether at home or on the go.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <h5>24/7 Customer Support</h5>
+            <p>
+              We're here for you day or night Our responsive support team is always ready to assist you with queries or concerns. 
+              Whether it's a minor issue or something urgent, you can count on our dedicated service team. 
+              Experience banking with peace of mind, knowing help is always just a call or click away. 
+              Your satisfaction is our priority.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <h5>Personalized Financial Advice</h5>
+            <p>
+              Every customer has unique financial goals—and we’re here to help you achieve yours. 
+              Our advisors work closely with you to create smart strategies for saving, investing, and growing your wealth. 
+              Whether you're planning for education, business, or retirement, we offer expert guidance every step of the way. 
+              Let’s build a brighter financial future, together.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial active">
+      <img src="https://i.pravatar.cc/80?img=1" alt="Client">
+      <h3>Michael Johnson</h3>
+      <div class="title">Entrepreneur</div>
+      <div class="text">This bank has completely transformed the way I manage my finances. The customer service is top-notch!</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=2" alt="Client">
+      <h3>Emily Davis</h3>
+      <div class="title">Freelancer</div>
+      <div class="text">Opening an account was smooth and easy. Their mobile app is so intuitive and helpful for my everyday needs.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=3" alt="Client">
+      <h3>James Miller</h3>
+      <div class="title">Software Engineer</div>
+      <div class="text">Fast transactions, great security, and excellent support — I trust them with my money every time.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=4" alt="Client">
+      <h3>Sarah Thompson</h3>
+      <div class="title">Real Estate Agent</div>
+      <div class="text">Their investment advice has helped me grow my savings. I always recommend them to my clients.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=5" alt="Client">
+      <h3>Christopher Lee</h3>
+      <div class="title">Business Owner</div>
+      <div class="text">I use this bank for both my personal and business accounts. Efficient, reliable, and innovative!</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=6" alt="Client">
+      <h3>Amanda Brown</h3>
+      <div class="title">Teacher</div>
+      <div class="text">The savings options are perfect for my goals. Their support team also responds quickly and professionally.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=7" alt="Client">
+      <h3>David Wilson</h3>
+      <div class="title">Accountant</div>
+      <div class="text">I love the transparency in their services. No hidden fees, and everything is clearly communicated.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=8" alt="Client">
+      <h3>Jessica Martinez</h3>
+      <div class="title">Photographer</div>
+      <div class="text">It’s the best digital banking experience I’ve had. I can bank anywhere, anytime — just perfect.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=9" alt="Client">
+      <h3>Brian Anderson</h3>
+      <div class="title">Investor</div>
+      <div class="text">Great options for both new and experienced investors. I appreciate how clear and helpful their tools are.</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=10" alt="Client">
+      <h3>Olivia Moore</h3>
+      <div class="title">Student</div>
+      <div class="text">Their student banking plan is amazing. I get discounts and no minimum balance — so convenient!</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=11" alt="Client">
+      <h3>Daniel White</h3>
+      <div class="title">Engineer</div>
+      <div class="text">I've switched from a traditional bank, and I couldn’t be happier. Fast, responsive, and no stress!</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=12" alt="Client">
+      <h3>Sophia Harris</h3>
+      <div class="title">Nurse</div>
+      <div class="text">Banking during my shifts has never been easier. The mobile app is a lifesaver!</div>
+    </div>
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/80?img=13" alt="Client">
+      <h3>Matthew Clark</h3>
+      <div class="title">Consultant</div>
+      <div class="text">This bank values customers. I got fast loan approval and the best rates in town!</div>
+    </div>
+  </div>
+
+  <div class="testimonial-dots">
+    <span class="dot active" onclick="showTestimonial(0)"></span>
+    <span class="dot" onclick="showTestimonial(1)"></span>
+    <span class="dot" onclick="showTestimonial(2)"></span>
+    <span class="dot" onclick="showTestimonial(3)"></span>
+    <span class="dot" onclick="showTestimonial(4)"></span>
+    <span class="dot" onclick="showTestimonial(5)"></span>
+    <span class="dot" onclick="showTestimonial(6)"></span>
+    <span class="dot" onclick="showTestimonial(7)"></span>
+    <span class="dot" onclick="showTestimonial(8)"></span>
+    <span class="dot" onclick="showTestimonial(9)"></span>
+    <span class="dot" onclick="showTestimonial(10)"></span>
+    <span class="dot" onclick="showTestimonial(11)"></span>
+    <span class="dot" onclick="showTestimonial(12)"></span>
+  </div>
+</section>
+
+
+
+
+
+  <div class="testimonial-dots">
+    <span class="dot active" onclick="showTestimonial(0)"></span>
+    <span class="dot" onclick="showTestimonial(1)"></span>
+    <span class="dot" onclick="showTestimonial(2)"></span>
+  </div>
+</section>
+
+    <section class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Our Work</h2>
+        <div class="gallery-grid">
+            <img src="images/office 1.jpeg">
+            <img src="images/office 2.jpeg">
+            <img src="images/office 3.jpeg">
+            <img src="images/office 4.jpeg">
+            <img src="images/office 5.jpeg">
+            <img src="images/office 7.jpeg">
+            <img src="images/office 8.jpeg">
+        </div>
+    </div>
+</section>
+
+    <section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/images5.jpeg"Jane Doe, CEO">
+                <h4>Samuel C. Kelly</h4>
+                <p>Chief Executive Officer (CEO)</p>
+            </div>
+            <div class="team-member">
+                <img src="images/images3.jpeg"David Miller">
+                <h4>David Miller</h4>
+                <p>Chairman of the Board</p>
+            </div>
+            <div class="team-member">
+                <img src="images/images6.jpeg"Peter Smith">
+                <h4>Peter Smith</h4>
+                <p>Chief Technology Officer (CTO)</p>
+            </div>
+            <div class="team-member">
+                <img src="images/images4.jpeg"Susan Johnson, Financial Advisor">
+                <h4>Susan Johnson</h4>
+                <p>Senior Financial Advisor</p>
+            </div>
+            <div class="team-member">
+                <img src="images/imagws.jpeg"Jane Doe, Branch Manger">
+                <h4>Jane Doe</h4>
+                <p>Branch Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="images/images2.jpeg" alt="Maria Garcia, Cybersecurity Specialist">
+                <h4>Maria Garcia</h4>
+                <p>Cybersecurity Specialist</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-section">
+            <h4>Get In Touch</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> mail@example.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Broome St, California.</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section newsletter">
+            <h4>Subscribe To Receive Helpful Articles, Customer Alerts, Services & More.</h4>
+            <form action="#">
+                <input type="email" placeholder="Your Email">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div class="footer-bottom">
+                <p> Bnp paribas. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="chatbot-icon">
+        <i class="fas fa-comment-dots"></i>
+        <span class="chatbot-notification">2</span>
+    </div>
+<script>
+  let current = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+
+  function showTestimonial(index) {
+    testimonials[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    testimonials[current].classList.add('active');
+    dots[current].classList.add('active');
+    const chatbotIcon = document.getElementById('chatbot-icon');
+    const chatbotContainer = document.getElementById('chatbot-container');
+
+    chatbotIcon.addEventListener('click', () => {
+        chatbotContainer.classList.toggle('chatbot-hidden');
+  })};
+</script>
+</body>
+</html>

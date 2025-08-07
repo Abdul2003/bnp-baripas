@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - BNP Paribas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
+      integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* --- Global Styles and Variables --- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #f7f9fc;
+        --dark-color: #2c3e50;
+        --light-color: #ffffff;
+        --text-color: #333333;
+        --border-radius: 8px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--dark-color);
+        margin-bottom: 50px;
+      }
+
+      /* --- Header --- */
+      .header {
+        background-color: var(--light-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+      }
+
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 80px;
+      }
+
+      .navigation-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      .navigation-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+      }
+
+      .navigation-links a:hover {
+        color: var(--primary-color);
+      }
+
+      /* --- About Us Page Styles --- */
+      .about-us-section {
+        padding: 80px 0;
+        background-color: var(--secondary-color);
+      }
+
+      .about-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+
+      .about-card {
+        background-color: var(--light-color);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-top: 5px solid var(--primary-color);
+      }
+
+      .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .about-card h3 {
+        font-size: 1.5rem;
+        color: var(--dark-color);
+        margin: 15px 0;
+      }
+
+      .about-card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      /* New P tag styling for more spaced out paragraphs */
+      .about-card p + p {
+        margin-top: 15px;
+      }
+
+      .about-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--dark-color);
+        color: #f7f9fc;
+        padding: 60px 0 20px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-map,
+      .footer-contact {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .footer-map img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 8px;
+      }
+
+      .footer-contact h3 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .footer-contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .footer-contact input,
+      .footer-contact textarea {
+        width: 100%;
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .footer-contact input::placeholder,
+      .footer-contact textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-contact .btn-primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .footer-contact .btn-primary:hover {
+        background-color: #0056b3;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-bottom p {
+        font-size: 0.9rem;
+        color: #c0c0c0;
+      }
+
+      /* --- Chatbot Styles --- */
+      #chatbot-icon {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        transition: transform 0.3s ease;
+      }
+
+      #chatbot-icon:hover {
+        transform: scale(1.1);
+      }
+
+      .chatbot-notification {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: red;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: 50%;
+      }
+
+      #chatbot-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 350px;
+        height: 450px;
+        background-color: var(--dark-color);
+        border: 1px solid #4a6480;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .chatbot-hidden {
+        transform: scale(0.95);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #chatbot-header {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      #chatbot-messages {
+        flex-grow: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        border-bottom: 1px solid #eee;
+      }
+
+      #chatbot-input {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background-color: var(--secondary-color);
+        box-sizing: border-box;
+        flex-shrink: 0;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-5">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item px-5 active">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item px-5">
+            <a class="nav-link" href="contact-us.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="about-us-section">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="about-intro">
+          For over a century, BNP Paribas has been a cornerstone of the global
+          financial industry, providing innovative and reliable services to our
+          clients. Our unwavering commitment to excellence, integrity, and
+          sustainability has shaped our journey and continues to guide our
+          future as a leading global financial institution. We believe in
+          building lasting relationships based on trust, transparency, and a
+          deep understanding of our clients' unique needs.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <i class="fas fa-bullseye about-icon"></i>
+            <h3>Our Mission</h3>
+            <p>
+              Our mission is to empower our clients to achieve their financial
+              aspirations by offering expert advice, cutting-edge financial
+              products, and unwavering support. We are dedicated to creating
+              long-term value for our shareholders, employees, and the
+              communities we serve. We achieve this by fostering a culture of
+              innovation and collaboration, constantly adapting to the evolving
+              financial landscape to provide the most effective solutions.
+            </p>
+            <p>
+              We believe that responsible banking goes beyond simple
+              transactions. Our mission includes a strong focus on corporate
+              social responsibility, investing in projects that promote economic
+              growth, social inclusion, and environmental protection.
+            </p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-eye about-icon"></i>
+            <h3>Our Vision</h3>
+            <p>
+              We envision a future where our bank is not only a leader in
+              finance but also a catalyst for positive change. We strive to be
+              the most trusted and sustainable partner for our clients,
+              innovating in the digital age while upholding the highest ethical
+              standards. Our vision is to set the benchmark for customer
+              service, technological advancement, and ethical governance in the
+              banking sector.
+            </p>
+            <p>
+              By leveraging our global network and local expertise, we aim to be
+              the preferred partner for individuals and businesses seeking to
+              navigate the complexities of the modern financial world. We are
+              committed to building a more inclusive and sustainable economy for
+              all.
+            </p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-history about-icon"></i>
+            <h3>Our History</h3>
+            <p>
+              Founded in 1848, our bank has grown from a local institution to a
+              global financial powerhouse with a presence in over 70 countries.
+              Our journey is marked by a legacy of resilience, strategic
+              expansion, and a steadfast commitment to our clients through
+              economic booms and challenging times alike.
+            </p>
+            <p>
+              Over the decades, we have played a pivotal role in major
+              historical financial developments, from funding industrial
+              revolutions to pioneering international trade. Today, we stand on
+              the shoulders of this rich history, combining traditional banking
+              values with a forward-looking approach to meet the demands of the
+              21st century.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-map">
+            <img src="https://via.placeholder.com/600x400" alt="World Map" />
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <form>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <textarea placeholder="Message"></textarea>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Company Name. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="chatbot-icon">
+      <i class="fas fa-comment-dots"></i>
+      <span class="chatbot-notification">2</span>
+    </div>
+
+    <div id="chatbot-container" class="chatbot-hidden">
+      <div id="chatbot-header">
+        <span>Chat with us!</span>
+      </div>
+      <div id="chatbot-messages"></div>
+      <input
+        type="text"
+        id="chatbot-input"
+        placeholder="Type your message..."
+      />
+    </div>
+
+    <script>
+      const chatbotIcon = document.getElementById("chatbot-icon");
+      const chatbotContainer = document.getElementById("chatbot-container");
+
+      chatbotIcon.addEventListener("click", () => {
+        chatbotContainer.classList.toggle("chatbot-hidden");
+      });
+    </script>
+  </body>
+</html>

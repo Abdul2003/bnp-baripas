@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+        <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
+
+       <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./js/signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"> <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item px-5">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="services.html">Services</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item px-5">
+        <a class="nav-link" href="contact-us.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="content">
+      <div class="d-flex justify-content-center">
+    <div class="wrapper">
+      <form action="#" id="signupForm">
+        <div class="title-container">
+          <h3 class="title">Create Login</h3>
+          <hr />
+        </div>
+        <div class="input-field">
+          <label>Email</label>
+          <input id="email" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Password</label>
+          <input id="password" type="password" required />
+        </div>
+        <div class="input-field">
+          <label>Confirm Password</label>
+          <input id="confirmPassword" type="password" required />
+        </div>
+        <div class="title-container">
+          <h3 class="title">Personal Information</h3>
+          <hr />
+        </div>
+
+        <div class="input-field">
+          <label>First Name</label>
+          <input id="first_name" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Last Name</label>
+          <input id="last_name" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Date Of Birth</label>
+          <input id="dob" type="date" required />
+        </div>
+        <div class="input-field">
+          <label>Mother's Maiden Name</label>
+          <input id="maiden" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>SSN</label>
+          <input id="ssn" type="text" required />
+        </div>
+        <div class="input-field">
+          <label for="file-upload" class="custom-file-upload">Passport</label>
+          <input type="file" name="uploadfile" id="passport" />
+        </div>
+
+        <div class="input-field">
+          <label>IBAN</label>
+          <input id="iban" type="text" required />
+        </div>
+        <div class="title-container">
+          <h3 class="title">Contact Information</h3>
+          <hr />
+        </div>
+
+        <div class="input-field">
+          <label>Street Address</label>
+          <input id="address" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Country</label>
+          <input id="country" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>City</label>
+          <input id="city" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>State</label>
+          <input id="state" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Zip Code</label>
+          <input id="zip" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Phone Number</label>
+          <input id="phone" type="text" required />
+        </div>
+        <div class="title-container">
+          <p class="title">
+            Select the account that matches the account number entered below
+          </p>
+        </div>
+        <hr />
+       
+         <div class="input-field">
+          <label>Account Type</label>
+          <select class="form-select" id="accountType">
+            <option value="Checking">Checking</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <label>Routing Number</label>
+          <input id="routingNumber" type="text" required />
+        </div>
+        <div class="input-field">
+          <label>Account Number</label>
+          <input id="accountNumber" type="text" required />
+        </div>
+        <button type="submit">Register</button>
+
+        <div class="register">
+          <p>Have an account? <a href="./index.html">Login</a></p>
+        </div>
+      </form>
+    </div>
+    </div>
+    <script>
+      window.embeddedChatbotConfig = {
+        chatbotId: "RFRWWG3T9M9Uph7c0syW5",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="RFRWWG3T9M9Uph7c0syW5"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+  </body>
+</html>
