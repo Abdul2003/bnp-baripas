@@ -11,22 +11,16 @@
     <link rel="stylesheet" href="./css/dashboard.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./js/dashboard.js"></script>
-    <!-- Bootstrap CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
-      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"
-      integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -39,7 +33,7 @@
       }
 
       :root {
-        --primary-color: #007bff;
+        --primary-color: #50c878;
         --secondary-color: #f7f9fc;
         --dark-color: #2c3e50;
         --light-color: #ffffff;
@@ -89,7 +83,7 @@
 
       .account-card p {
         font-size: 0.9rem;
-        color: #888;
+        color:#8bc34a;
         margin-top: 0;
       }
 
@@ -152,40 +146,28 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.jpeg" alt="Bnp Logo" class="logo-img"
-      /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item px-5 active">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item px-5">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item px-5">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item px-5">
-            <a class="nav-link" href="contact-us.html">Contact</a>
-          </li>
-        </ul>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo-link">
+            <img style="height: 100px" src="images/logo.jpeg" alt="Bnp Logo" />
+          </a>
+
+          <div class="navigation-links-container">
+            <ul class="navigation-links">
+              <li><a href="index.html" class="navigation-link">Home</a></li>
+              <li>
+                <a href="services.html" class="navigation-link">Services</a>
+              </li>
+              <li><a href="about.html" class="navigation-link">About</a></li>
+              <li>
+                <a href="Contact us.html" class="navigation-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <section class="dashboard-section">
       <div class="dashboardContainer">

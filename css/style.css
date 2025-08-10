@@ -58,14 +58,18 @@ a {
 
 .navigation-link:hover,
 .navigation-link.active {
-  background-color: #007bff;
+  background-color: #50c878; /* Emerald Green */
   color: #fff;
   text-decoration: none;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(
+    to right,
+    #50c878,
+    #046307
+  ); /* Emerald green gradient */
   color: #fff;
   padding: 80px 0;
 }
@@ -111,9 +115,8 @@ a {
 
 .login-title {
   margin-bottom: 20px;
-  color: #007bff;
+  color: #50c878; /* Emerald Green */
 }
-
 .form-group {
   margin-bottom: 15px;
 }
@@ -134,7 +137,7 @@ textarea {
 
 .forgot-link {
   font-size: 0.9rem;
-  color: #007bff;
+  color: #50c878;
 }
 
 .btn {
@@ -147,7 +150,7 @@ textarea {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #50c878;
   color: white;
 }
 
@@ -168,7 +171,7 @@ textarea {
 
 .section-title {
   font-size: 2.5rem;
-  color: #007bff;
+  color: #50c878;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -189,7 +192,7 @@ textarea {
 
 .service-icon {
   font-size: 2rem;
-  color: #007bff;
+  color: #50c878;
   margin-bottom: 15px;
 }
 
@@ -211,7 +214,7 @@ textarea {
 }
 
 .about-text h3 {
-  color: #007bff;
+  color: #50c878;
   margin-top: 20px;
 }
 
@@ -252,6 +255,7 @@ textarea {
     grid-template-columns: 100%;
   }
 }
+
 .customer-service-content h3 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -277,7 +281,7 @@ textarea {
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 10px;
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
 }
 
 .features-with-image {
@@ -553,7 +557,7 @@ textarea {
 }
 
 .newsletter button:hover {
-  background-color: #0056b3;
+  background-color: #50c878; /* Emerald Green */
 }
 
 .footer-bottom {
@@ -825,7 +829,7 @@ textarea {
   }
 
   :root {
-    --primary-color: #007bff;
+    --primary-color: #50c878;
     --secondary-color: #f7f9fc;
     --dark-color: #2c3e50;
     --light-color: #ffffff;
