@@ -80,6 +80,7 @@ onAuthStateChanged(auth, async (user) => {
           recipientMessage: recipientMessage,
           transferType: "Wire Transfer",
           transferDirection: "To",
+          message: "",
         }),
       });
 

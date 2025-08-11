@@ -63,14 +63,16 @@ onAuthStateChanged(auth, async (user) => {
           const amount = document.createElement("td");
           amount.innerHTML = `$${item.amount}`;
           const status = document.createElement("td");
-          status.innerHTML = item.status;
-          if (status.innerHTML == "Pending") {
+          if (item.message == "") {
+            status.innerHTML = item.status;
+          } else {
+            status.innerHTML = `${item.status} (${item.message})`;
+          }
+          if (item.status == "Pending") {
             status.style.color = "orange";
-          } else if (status.innerHTML == "Successful") {
+          } else if (item.status == "Successful") {
             status.style.color = "lightgreen";
-          } else if (status.innerHTML == "Failed") {
-            status.innerHTML =
-              "Failed (We Have Detected A Suspicious Activity Going On In Your Account Please Contact Customer Care At: Bnpparibascustomercare@outlook.com)";
+          } else if (item.status == "Failed") {
             status.style.color = "red";
           }
 
