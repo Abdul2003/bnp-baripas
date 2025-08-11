@@ -61,7 +61,7 @@ onAuthStateChanged(auth, async (user) => {
           const beneficiary = document.createElement("td");
           beneficiary.innerHTML = item.name;
           const amount = document.createElement("td");
-          amount.innerHTML = item.amount;
+          amount.innerHTML = `$${item.amount}`;
           const status = document.createElement("td");
           status.innerHTML = item.status;
           if (status.innerHTML == "Pending") {
