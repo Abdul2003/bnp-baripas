@@ -35,7 +35,6 @@ onAuthStateChanged(auth, async (user) => {
   console.log("doc snap is " + docSnap.exists());
   const spinner = document.getElementById("spinner");
   transactionForm.addEventListener("submit", async (e) => {
-    spinner.style.display = "block";
     e.preventDefault();
     if (
       transactionForm["beneficiaryAccount"].value == "" ||
@@ -64,6 +63,7 @@ onAuthStateChanged(auth, async (user) => {
       const currency = transactionForm["currency"].value;
       const transferPurpose = transactionForm["transferPurpose"].value;
       const recipientMessage = transactionForm["recipientMessage"].value;
+      spinner.style.display = "block";
       if (docSnap.exists() == true) {
         updateDoc(docRef, {
           Transaction: arrayUnion({
@@ -85,6 +85,15 @@ onAuthStateChanged(auth, async (user) => {
             message: "",
           }),
         });
+        setTimeout(function () {
+          spinner.style.display = "none";
+          Swal.fire({
+            title: "Pending",
+            text: "Transaction Pending",
+            icon: "warning",
+          });
+        }, 2000);
+        transactionForm.reset();
       } else {
         setDoc(docRef, {
           Transaction: arrayUnion({
@@ -106,18 +115,18 @@ onAuthStateChanged(auth, async (user) => {
             message: "",
           }),
         });
+        setTimeout(function () {
+          spinner.style.display = "none";
+          Swal.fire({
+            title: "Pending",
+            text: "Transaction Pending",
+            icon: "warning",
+            willClose: () => {
+              location.reload();
+            },
+          });
+        }, 2000);
       }
-
-      setTimeout(function () {
-        spinner.style.display = "none";
-        Swal.fire({
-          title: "Pending",
-          text: "Transaction Pending",
-          icon: "warning",
-        });
-      }, 2000);
-
-      transactionForm.reset();
     }
   });
 });
