@@ -30,7 +30,9 @@ const auth = getAuth();
 onAuthStateChanged(auth, async (user) => {
   const db = getFirestore(app);
   const docRef = doc(db, "Transactions", user.email);
+
   const docSnap = await getDoc(docRef);
+  console.log("doc snap is " + docSnap.exists());
   const spinner = document.getElementById("spinner");
   transactionForm.addEventListener("submit", async (e) => {
     spinner.style.display = "block";
@@ -62,27 +64,49 @@ onAuthStateChanged(auth, async (user) => {
       const currency = transactionForm["currency"].value;
       const transferPurpose = transactionForm["transferPurpose"].value;
       const recipientMessage = transactionForm["recipientMessage"].value;
-      // if (docSnap.exists()) {
-      updateDoc(docRef, {
-        Transaction: arrayUnion({
-          date: getDate.toLocaleString(),
-          account: account,
-          name: name,
-          bank: bank,
-          amount: amount,
-          status: "Pending",
-          recipientAddress: recipientAddress,
-          bankAddress: bankAddress,
-          routingNumber: routingNumber,
-          swift: swift,
-          currency: currency,
-          transferPurpose: transferPurpose,
-          recipientMessage: recipientMessage,
-          transferType: "Wire Transfer",
-          transferDirection: "To",
-          message: "",
-        }),
-      });
+      if (docSnap.exists() == true) {
+        updateDoc(docRef, {
+          Transaction: arrayUnion({
+            date: getDate.toLocaleString(),
+            account: account,
+            name: name,
+            bank: bank,
+            amount: amount,
+            status: "Pending",
+            recipientAddress: recipientAddress,
+            bankAddress: bankAddress,
+            routingNumber: routingNumber,
+            swift: swift,
+            currency: currency,
+            transferPurpose: transferPurpose,
+            recipientMessage: recipientMessage,
+            transferType: "Wire Transfer",
+            transferDirection: "To",
+            message: "",
+          }),
+        });
+      } else {
+        setDoc(docRef, {
+          Transaction: arrayUnion({
+            date: getDate.toLocaleString(),
+            account: account,
+            name: name,
+            bank: bank,
+            amount: amount,
+            status: "Pending",
+            recipientAddress: recipientAddress,
+            bankAddress: bankAddress,
+            routingNumber: routingNumber,
+            swift: swift,
+            currency: currency,
+            transferPurpose: transferPurpose,
+            recipientMessage: recipientMessage,
+            transferType: "Wire Transfer",
+            transferDirection: "To",
+            message: "",
+          }),
+        });
+      }
 
       setTimeout(function () {
         spinner.style.display = "none";
