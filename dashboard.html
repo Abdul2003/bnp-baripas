@@ -179,7 +179,7 @@
 
         <div class="account-summary">
           <div class="account-card">
-            <h3>Checking Account</h3>
+            <h3>Balance</h3>
             <p>Account ending in: <span id="checkingEnd">0000</span></p>
             <div class="balance-container">
               <span class="balance-amount"
@@ -193,7 +193,7 @@
           </div>
 
           <div class="account-card">
-            <h3>Savings Account</h3>
+            <h3>Equity</h3>
             <p>Account ending in: <span id="savingsEnd">0000</span></p>
             <div class="balance-container">
               <span class="balance-amount"
@@ -207,8 +207,8 @@
           </div>
 
           <div class="account-card">
-            <h3>Credit Card</h3>
-            <p>Card ending in: <span id="creditEnd">0000</span></p>
+            <h3>Profit/Loss</h3>
+            <p>Account ending in: <span id="creditEnd">0000</span></p>
             <div class="balance-container">
               <span class="balance-amount"
                 >$<span id="credit-balance">0000</span></span
@@ -220,62 +220,38 @@
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <div class="row p-3">
-                  <div class="col-6">
-                    <div class="col-12 w-100 mt-5">
-                      <div>
-                        <img src="./images/chip.png" style="width: 50px" />
-                      </div>
-                      <div class="text-white" id="number">****************</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-2 w-50">
-                        <div class="text-white">CVV</div>
-                        <div class="text-white" id="cvv">***</div>
-                      </div>
-                      <div class="col-2">
-                        <div class="text-white">EXP</div>
-                        <div class="text-white" id="expiry">**/**</div>
-                      </div>
-
-                      <p id="full-name" class="mt-3 text-white">****</p>
-                      <p id="cardType" class="mt-0 text-white">****</p>
-                    </div>
-                  </div>
-                  <div
-                    class="col-6 mb-2 d-flex align-items-end justify-content-end"
-                  >
-                    <button id="flipCardBtn" class="btn btn-success">
-                      SHOW ATM
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
         <div class="quick-actions">
           <a href="transfer.html" class="btn-action">
             <i class="fas fa-exchange-alt"></i>
-            <span>Transfer Funds</span>
-          </a>
-          <a href="#" class="btn-action">
-            <i class="fas fa-money-check-alt"></i>
-            <span>Pay Bills</span>
+            <span>Withdrawal</span>
           </a>
           <a href="history.html" class="btn-action">
             <i class="fas fa-history"></i>
             <span>View History</span>
           </a>
-          <a href="#" class="btn-action">
+          <a href="deposit.html" class="btn-action">
             <i class="fas fa-comment-dollar"></i>
-            <span>Deposit Check</span>
+            <span>Deposit</span>
           </a>
         </div>
+        <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/financials-overview/?exchange=NASDAQ" rel="noopener nofollow" target="_blank"><span class="blue-text">AAPL fundamentals by TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+  {
+  "symbol": "NASDAQ:AAPL",
+  "colorTheme": "light",
+  "displayMode": "regular",
+  "isTransparent": false,
+  "locale": "en",
+  "width": 2000,
+  "height": 500
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
         <div class="m-5 d-flex justify-content-center">
           <button id="logout" class="px-5 py-2 btn btn-danger">Log Out</button>
         </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - BNP Paribas</title>
+    <title>About Us - BNP Paribas Trade Option</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -131,7 +131,6 @@
         font-size: 0.95rem;
       }
 
-      /* New P tag styling for more spaced out paragraphs */
       .about-card p + p {
         margin-top: 15px;
       }
@@ -141,6 +140,40 @@
         color: var(--primary-color);
         margin-bottom: 10px;
       }
+      
+      /* --- Forex Broker Section --- */
+      .forex-broker-section {
+          padding: 80px 0;
+          background-color: var(--light-color);
+      }
+
+      .forex-content-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+      }
+      
+      .forex-text {
+          max-width: 600px;
+      }
+
+      .forex-text p {
+          font-size: 1.1rem;
+          color: #555;
+      }
+
+      .forex-image {
+          text-align: center;
+      }
+
+      .forex-image img {
+          max-width: 100%;
+          height: auto;
+          border-radius: var(--border-radius);
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
 
       /* --- Footer --- */
       .footer {
@@ -150,66 +183,78 @@
       }
 
       .footer-grid {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 40px;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
       }
 
-      .footer-map,
-      .footer-contact {
+      .footer-section {
         flex: 1;
-        min-width: 300px;
       }
 
-      .footer-map img {
-        width: 100%;
-        max-width: 600px;
-        border-radius: 8px;
-      }
-
-      .footer-contact h3 {
+      .footer-section h4 {
         color: var(--primary-color);
         margin-bottom: 20px;
         font-weight: 600;
+        font-size: 1.2rem;
       }
 
-      .footer-contact form {
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-section li {
+        margin-bottom: 10px;
         display: flex;
-        flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        gap: 10px;
       }
 
-      .footer-contact input,
-      .footer-contact textarea {
-        width: 100%;
-        padding: 12px;
-        background-color: rgba(255, 255, 255, 0.1);
+      .social-icons a {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary-color);
+      }
+
+      .newsletter form {
+        display: flex;
+        gap: 10px;
+      }
+
+      .newsletter input {
+        flex-grow: 1;
+        padding: 10px;
         border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
         border-radius: 5px;
         color: #fff;
-        font-size: 1rem;
       }
 
-      .footer-contact input::placeholder,
-      .footer-contact textarea::placeholder {
+      .newsletter input::placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
 
-      .footer-contact .btn-primary {
+      .newsletter button {
         background-color: var(--primary-color);
         color: #fff;
-        padding: 12px 25px;
-        border-radius: 50px;
-        font-weight: 600;
-        cursor: pointer;
         border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
         transition: background-color 0.3s ease;
       }
 
-      .footer-contact .btn-primary:hover {
-        background-color: #0056b3;
+      .newsletter button:hover {
+        background-color: #43a362; /* Darker green for hover */
       }
 
       .footer-bottom {
@@ -222,6 +267,7 @@
       .footer-bottom p {
         font-size: 0.9rem;
         color: #c0c0c0;
+        margin: 0;
       }
 
       /* --- Chatbot Styles --- */
@@ -312,13 +358,67 @@
         flex-shrink: 0;
         border-top: 1px solid #ddd;
       }
+
+      @media (max-width: 768px) {
+        .about-us-section {
+          padding: 50px 0;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .forex-content-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .forex-text {
+            text-align: center;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        
+        .footer-section ul {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .newsletter form {
+          flex-direction: column;
+        }
+        
+        .newsletter input {
+            text-align: center;
+        }
+
+        .newsletter button {
+          width: 100%;
+        }
+
+        #chatbot-container {
+          width: 90%;
+          right: 5%;
+          bottom: 20px;
+          height: 400px;
+        }
+
+        #chatbot-icon {
+          right: 20px;
+          bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="logo">
-          <img src="images/logo.jpeg" />
+          <img src="images/logo.jpeg" alt="BNP Paribas Trade Option Logo" />
         </div>
         <div class="navigation-links-container">
           <ul class="navigation-links">
@@ -339,12 +439,12 @@
       <div class="container">
         <h2 class="section-title">About Us</h2>
         <p class="about-intro">
-          For over a century, BNP Paribas has been a cornerstone of the global
-          financial industry, providing innovative and reliable services to our
-          clients. Our unwavering commitment to excellence, integrity, and
-          sustainability has shaped our journey and continues to guide our
-          future as a leading global financial institution. We believe in
-          building lasting relationships based on trust, transparency, and a
+          For over a century, BNP Paribas Trade Option has been a cornerstone of
+          the global financial industry, providing innovative and reliable
+          services to our clients. Our unwavering commitment to excellence,
+          integrity, and sustainability has shaped our journey and continues to
+          guide our future as a leading global financial institution. We believe
+          in building lasting relationships based on trust, transparency, and a
           deep understanding of our clients' unique needs.
         </p>
 
@@ -362,7 +462,7 @@
               financial landscape to provide the most effective solutions.
             </p>
             <p>
-              We believe that responsible banking goes beyond simple
+              We believe that responsible trading goes beyond simple
               transactions. Our mission includes a strong focus on corporate
               social responsibility, investing in projects that promote economic
               growth, social inclusion, and environmental protection.
@@ -372,13 +472,13 @@
             <i class="fas fa-eye about-icon"></i>
             <h3>Our Vision</h3>
             <p>
-              We envision a future where our bank is not only a leader in
-              finance but also a catalyst for positive change. We strive to be
-              the most trusted and sustainable partner for our clients,
+              We envision a future where our company is not only a leader in
+              online trading but also a catalyst for positive change. We strive
+              to be the most trusted and sustainable partner for our clients,
               innovating in the digital age while upholding the highest ethical
               standards. Our vision is to set the benchmark for customer
               service, technological advancement, and ethical governance in the
-              banking sector.
+              trading industry.
             </p>
             <p>
               By leveraging our global network and local expertise, we aim to be
@@ -392,7 +492,7 @@
             <i class="fas fa-history about-icon"></i>
             <h3>Our History</h3>
             <p>
-              Founded in 1848, our bank has grown from a local institution to a
+              Founded in 19th century, our bank has grown from a local institution to a
               global financial powerhouse with a presence in over 70 countries.
               Our journey is marked by a legacy of resilience, strategic
               expansion, and a steadfast commitment to our clients through
@@ -411,36 +511,80 @@
       </div>
     </section>
 
-   <footer class="footer">
-    <div class="container footer-grid">
-        <div class="footer-section">
+    <section class="forex-broker-section">
+      <div class="container">
+        <h2 class="section-title">Forex & Options Trading</h2>
+        <div class="forex-content-grid">
+          <div class="forex-text">
+            <p>
+                As a leading provider of Forex and Options trading, we offer our clients direct access to the world's most dynamic financial markets. We empower traders of all levels with a suite of advanced trading tools, real-time market data, and expert analysis to help you make informed decisions and execute a wide range of trading strategies.
+            </p>
+            <p>
+                Our platform is built on the principles of speed, reliability, and transparency. With a focus on derivative products, including forex options, we provide a versatile environment for managing risk and leveraging market opportunities. Whether you are a seasoned trader or just starting out, our dedicated support and educational resources are here to help you navigate the complexities of these markets and unlock your full potential.
+            </p>
+          </div>
+         <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/financials-overview/?exchange=NASDAQ" rel="noopener nofollow" target="_blank"><span class="blue-text">AAPL fundamentals by TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+  {
+  "symbol": "NASDAQ:AAPL",
+  "colorTheme": "dark",
+  "displayMode": "regular",
+  "isTransparent": false,
+  "locale": "en",
+  "width": 400,
+  "height": 550
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
             <h4>Get In Touch</h4>
             <ul>
-                <li><i class="fas fa-envelope"></i>Bnpparibascustomercare@outlook.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> 787 7th Avenue, New York, NY 10019</li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                Bnpparibascustomercare@outlook.com
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 787 7th Avenue, New York,
+                NY 10019
+              </li>
             </ul>
-        </div>
-        <div class="footer-section">
+          </div>
+          <div class="footer-section">
             <h4>Follow us</h4>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-        </div>
-        <div class="footer-section newsletter">
-            <h4>Subscribe To Receive Helpful Articles, Customer Alerts, Services & More.</h4>
+          </div>
+          <div class="footer-section newsletter">
+            <h4>
+              Subscribe To Receive Helpful Articles, Customer Alerts, Services &
+              More.
+            </h4>
             <form action="#">
-                <input type="email" placeholder="Your Email">
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              <input type="email" placeholder="Your Email" />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
-            <div class="footer-bottom">
-                <p> Bnp paribas. All Rights Reserved</p>
-            </div>
+          </div>
         </div>
-    </div>
-</footer>
- <div id="chatbot-icon">
+        <div class="footer-bottom">
+          <p>&copy; 2024 BNP Paribas Trade Option. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <div id="chatbot-icon">
       <i class="fas fa-comment-dots"></i>
       <span class="chatbot-notification"></span>
     </div>
